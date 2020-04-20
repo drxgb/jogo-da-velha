@@ -32,6 +32,6 @@
 *.app
 
 # Visual Studio Project Files
-.vcxproj
-.filters
-.users
+*.vcxproj
+*.filters
+*.user
