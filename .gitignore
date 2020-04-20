@@ -35,3 +35,10 @@
 *.vcxproj
 *.filters
 *.user
+
+# Debug Files
+*.log
+*.idb
+*.pdb
+*.tlog
+*.lastbuildstate
