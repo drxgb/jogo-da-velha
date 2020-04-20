@@ -17,6 +17,40 @@ void ui::titulo() {
 	cout << endl;
 }
 
+void ui::desenhaTabuleiro() {
+	int offset = 15;
+	int width = 3;
+	int height = 3;
+	
+	// Desenhar campo de acordo com o tamanho (as linhas também contam como tile)
+	for (int y = 0; y < height * 2 - 1; y++) {
+		cout << setw(offset) << ' ';
+		for (int x = 0; x < width * 2 - 1; x++) {
+			if (y % 2 == 0) {
+				// Desenhar marcações dos jogadores, caso tenham
+				if (x % 2 == 0) {
+					cout << ' ';
+				}
+				else {
+					cout << '|';
+				}
+			}
+			else {
+				// Desenhar linhas separadoras
+				if (x % 2 == 0) {
+					cout << '-';
+				}
+				else {
+					cout << '+';
+				}
+			}
+		}
+		cout << endl;
+	}
+
+	cout << endl;
+}
+
 /*
 	==========================================================
 				MÉTODOS PRIVADOS
@@ -24,5 +58,5 @@ void ui::titulo() {
 */
 
 void ui::linha(char c, int f) {
-	cout << setfill(c) << setw(f) << '\0' << setfill(' ') << endl;
+	cout << setfill(c) << setw(f) << '\n' << setfill(' ');
 }

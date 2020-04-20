@@ -8,5 +8,6 @@ int main() {
 	setlocale(LC_ALL, "portuguese");
 
 	ui::titulo();
+	ui::desenhaTabuleiro();
 	return 0;
 }
